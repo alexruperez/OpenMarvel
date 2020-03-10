@@ -1,0 +1,616 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		D516F81A2417FF3500992463 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516F8192417FF3500992463 /* AppDelegate.swift */; };
+		D516F81D2417FF3500992463 /* OpenMarvel.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = D516F81B2417FF3500992463 /* OpenMarvel.xcdatamodeld */; };
+		D516F81F2417FF3500992463 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516F81E2417FF3500992463 /* SceneDelegate.swift */; };
+		D516F8212417FF3500992463 /* MasterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516F8202417FF3500992463 /* MasterViewController.swift */; };
+		D516F8232417FF3500992463 /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516F8222417FF3500992463 /* DetailViewController.swift */; };
+		D516F8262417FF3500992463 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D516F8242417FF3500992463 /* Main.storyboard */; };
+		D516F8282417FF3800992463 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D516F8272417FF3800992463 /* Assets.xcassets */; };
+		D516F82B2417FF3800992463 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D516F8292417FF3800992463 /* LaunchScreen.storyboard */; };
+		D516F8362417FF3800992463 /* OpenMarvelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516F8352417FF3800992463 /* OpenMarvelTests.swift */; };
+		D516F8412417FF3800992463 /* OpenMarvelUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516F8402417FF3800992463 /* OpenMarvelUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		D516F8322417FF3800992463 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D516F80E2417FF3500992463 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D516F8152417FF3500992463;
+			remoteInfo = OpenMarvel;
+		};
+		D516F83D2417FF3800992463 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D516F80E2417FF3500992463 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D516F8152417FF3500992463;
+			remoteInfo = OpenMarvel;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		D516F8162417FF3500992463 /* OpenMarvel.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OpenMarvel.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		D516F8192417FF3500992463 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		D516F81C2417FF3500992463 /* OpenMarvel.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = OpenMarvel.xcdatamodel; sourceTree = "<group>"; };
+		D516F81E2417FF3500992463 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		D516F8202417FF3500992463 /* MasterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MasterViewController.swift; sourceTree = "<group>"; };
+		D516F8222417FF3500992463 /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
+		D516F8252417FF3500992463 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		D516F8272417FF3800992463 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		D516F82A2417FF3800992463 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		D516F82C2417FF3800992463 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D516F8312417FF3800992463 /* OpenMarvelTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenMarvelTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D516F8352417FF3800992463 /* OpenMarvelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenMarvelTests.swift; sourceTree = "<group>"; };
+		D516F8372417FF3800992463 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D516F83C2417FF3800992463 /* OpenMarvelUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = OpenMarvelUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		D516F8402417FF3800992463 /* OpenMarvelUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenMarvelUITests.swift; sourceTree = "<group>"; };
+		D516F8422417FF3800992463 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		D516F8132417FF3500992463 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D516F82E2417FF3800992463 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D516F8392417FF3800992463 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		D516F80D2417FF3500992463 = {
+			isa = PBXGroup;
+			children = (
+				D516F8182417FF3500992463 /* OpenMarvel */,
+				D516F8342417FF3800992463 /* OpenMarvelTests */,
+				D516F83F2417FF3800992463 /* OpenMarvelUITests */,
+				D516F8172417FF3500992463 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		D516F8172417FF3500992463 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				D516F8162417FF3500992463 /* OpenMarvel.app */,
+				D516F8312417FF3800992463 /* OpenMarvelTests.xctest */,
+				D516F83C2417FF3800992463 /* OpenMarvelUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		D516F8182417FF3500992463 /* OpenMarvel */ = {
+			isa = PBXGroup;
+			children = (
+				D516F8192417FF3500992463 /* AppDelegate.swift */,
+				D516F81E2417FF3500992463 /* SceneDelegate.swift */,
+				D516F8202417FF3500992463 /* MasterViewController.swift */,
+				D516F8222417FF3500992463 /* DetailViewController.swift */,
+				D516F8242417FF3500992463 /* Main.storyboard */,
+				D516F8272417FF3800992463 /* Assets.xcassets */,
+				D516F8292417FF3800992463 /* LaunchScreen.storyboard */,
+				D516F82C2417FF3800992463 /* Info.plist */,
+				D516F81B2417FF3500992463 /* OpenMarvel.xcdatamodeld */,
+			);
+			path = OpenMarvel;
+			sourceTree = "<group>";
+		};
+		D516F8342417FF3800992463 /* OpenMarvelTests */ = {
+			isa = PBXGroup;
+			children = (
+				D516F8352417FF3800992463 /* OpenMarvelTests.swift */,
+				D516F8372417FF3800992463 /* Info.plist */,
+			);
+			path = OpenMarvelTests;
+			sourceTree = "<group>";
+		};
+		D516F83F2417FF3800992463 /* OpenMarvelUITests */ = {
+			isa = PBXGroup;
+			children = (
+				D516F8402417FF3800992463 /* OpenMarvelUITests.swift */,
+				D516F8422417FF3800992463 /* Info.plist */,
+			);
+			path = OpenMarvelUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		D516F8152417FF3500992463 /* OpenMarvel */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D516F8452417FF3800992463 /* Build configuration list for PBXNativeTarget "OpenMarvel" */;
+			buildPhases = (
+				D516F8122417FF3500992463 /* Sources */,
+				D516F8132417FF3500992463 /* Frameworks */,
+				D516F8142417FF3500992463 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = OpenMarvel;
+			productName = OpenMarvel;
+			productReference = D516F8162417FF3500992463 /* OpenMarvel.app */;
+			productType = "com.apple.product-type.application";
+		};
+		D516F8302417FF3800992463 /* OpenMarvelTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D516F8482417FF3800992463 /* Build configuration list for PBXNativeTarget "OpenMarvelTests" */;
+			buildPhases = (
+				D516F82D2417FF3800992463 /* Sources */,
+				D516F82E2417FF3800992463 /* Frameworks */,
+				D516F82F2417FF3800992463 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D516F8332417FF3800992463 /* PBXTargetDependency */,
+			);
+			name = OpenMarvelTests;
+			productName = OpenMarvelTests;
+			productReference = D516F8312417FF3800992463 /* OpenMarvelTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		D516F83B2417FF3800992463 /* OpenMarvelUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D516F84B2417FF3800992463 /* Build configuration list for PBXNativeTarget "OpenMarvelUITests" */;
+			buildPhases = (
+				D516F8382417FF3800992463 /* Sources */,
+				D516F8392417FF3800992463 /* Frameworks */,
+				D516F83A2417FF3800992463 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D516F83E2417FF3800992463 /* PBXTargetDependency */,
+			);
+			name = OpenMarvelUITests;
+			productName = OpenMarvelUITests;
+			productReference = D516F83C2417FF3800992463 /* OpenMarvelUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D516F80E2417FF3500992463 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1130;
+				LastUpgradeCheck = 1130;
+				ORGANIZATIONNAME = alexruperez;
+				TargetAttributes = {
+					D516F8152417FF3500992463 = {
+						CreatedOnToolsVersion = 11.3.1;
+					};
+					D516F8302417FF3800992463 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = D516F8152417FF3500992463;
+					};
+					D516F83B2417FF3800992463 = {
+						CreatedOnToolsVersion = 11.3.1;
+						TestTargetID = D516F8152417FF3500992463;
+					};
+				};
+			};
+			buildConfigurationList = D516F8112417FF3500992463 /* Build configuration list for PBXProject "OpenMarvel" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = D516F80D2417FF3500992463;
+			productRefGroup = D516F8172417FF3500992463 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				D516F8152417FF3500992463 /* OpenMarvel */,
+				D516F8302417FF3800992463 /* OpenMarvelTests */,
+				D516F83B2417FF3800992463 /* OpenMarvelUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		D516F8142417FF3500992463 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D516F82B2417FF3800992463 /* LaunchScreen.storyboard in Resources */,
+				D516F8282417FF3800992463 /* Assets.xcassets in Resources */,
+				D516F8262417FF3500992463 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D516F82F2417FF3800992463 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D516F83A2417FF3800992463 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		D516F8122417FF3500992463 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D516F8212417FF3500992463 /* MasterViewController.swift in Sources */,
+				D516F81D2417FF3500992463 /* OpenMarvel.xcdatamodeld in Sources */,
+				D516F8232417FF3500992463 /* DetailViewController.swift in Sources */,
+				D516F81A2417FF3500992463 /* AppDelegate.swift in Sources */,
+				D516F81F2417FF3500992463 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D516F82D2417FF3800992463 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D516F8362417FF3800992463 /* OpenMarvelTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D516F8382417FF3800992463 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D516F8412417FF3800992463 /* OpenMarvelUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D516F8332417FF3800992463 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D516F8152417FF3500992463 /* OpenMarvel */;
+			targetProxy = D516F8322417FF3800992463 /* PBXContainerItemProxy */;
+		};
+		D516F83E2417FF3800992463 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D516F8152417FF3500992463 /* OpenMarvel */;
+			targetProxy = D516F83D2417FF3800992463 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		D516F8242417FF3500992463 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D516F8252417FF3500992463 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		D516F8292417FF3800992463 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				D516F82A2417FF3800992463 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		D516F8432417FF3800992463 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		D516F8442417FF3800992463 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		D516F8462417FF3800992463 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q6BEQCNWYM;
+				INFOPLIST_FILE = OpenMarvel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexruperez.OpenMarvel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		D516F8472417FF3800992463 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q6BEQCNWYM;
+				INFOPLIST_FILE = OpenMarvel/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexruperez.OpenMarvel;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		D516F8492417FF3800992463 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q6BEQCNWYM;
+				INFOPLIST_FILE = OpenMarvelTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexruperez.OpenMarvelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenMarvel.app/OpenMarvel";
+			};
+			name = Debug;
+		};
+		D516F84A2417FF3800992463 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q6BEQCNWYM;
+				INFOPLIST_FILE = OpenMarvelTests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.2;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexruperez.OpenMarvelTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/OpenMarvel.app/OpenMarvel";
+			};
+			name = Release;
+		};
+		D516F84C2417FF3800992463 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q6BEQCNWYM;
+				INFOPLIST_FILE = OpenMarvelUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexruperez.OpenMarvelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OpenMarvel;
+			};
+			name = Debug;
+		};
+		D516F84D2417FF3800992463 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = Q6BEQCNWYM;
+				INFOPLIST_FILE = OpenMarvelUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexruperez.OpenMarvelUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = OpenMarvel;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		D516F8112417FF3500992463 /* Build configuration list for PBXProject "OpenMarvel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D516F8432417FF3800992463 /* Debug */,
+				D516F8442417FF3800992463 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D516F8452417FF3800992463 /* Build configuration list for PBXNativeTarget "OpenMarvel" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D516F8462417FF3800992463 /* Debug */,
+				D516F8472417FF3800992463 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D516F8482417FF3800992463 /* Build configuration list for PBXNativeTarget "OpenMarvelTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D516F8492417FF3800992463 /* Debug */,
+				D516F84A2417FF3800992463 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		D516F84B2417FF3800992463 /* Build configuration list for PBXNativeTarget "OpenMarvelUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D516F84C2417FF3800992463 /* Debug */,
+				D516F84D2417FF3800992463 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		D516F81B2417FF3500992463 /* OpenMarvel.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				D516F81C2417FF3500992463 /* OpenMarvel.xcdatamodel */,
+			);
+			currentVersion = D516F81C2417FF3500992463 /* OpenMarvel.xcdatamodel */;
+			path = OpenMarvel.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = D516F80E2417FF3500992463 /* Project object */;
+}
