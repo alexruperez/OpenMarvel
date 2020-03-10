@@ -4,10 +4,73 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Data.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
+		<key>DataTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>3</integer>
+		</dict>
+		<key>Domain.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>2</integer>
+		</dict>
+		<key>DomainTests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>4</integer>
+		</dict>
+		<key>Mock.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>5</integer>
+		</dict>
 		<key>OpenMarvel.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
 			<integer>0</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>D516F8152417FF3500992463</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D516F8302417FF3800992463</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D516F83B2417FF3800992463</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D516F8512417FFDC00992463</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D516F85C2417FFEF00992463</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D516F8C524182CBE00992463</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>D516F8D424182CD400992463</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

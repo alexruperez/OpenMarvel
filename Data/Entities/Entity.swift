@@ -1,0 +1,1 @@
+typealias Entity = Decodable & DomainTransformable
