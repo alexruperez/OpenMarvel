@@ -28,5 +28,5 @@ extension Service {
         }
         return data
     }
-    var headers: [String : String]? { ["Content-type": contentType] }
+    var headers: [String: String]? { ["Content-type": contentType] }
 }

@@ -19,8 +19,15 @@ public final class CharactersProvider: CharactersProviderContract {
             switch result {
             case let .success(response):
                 do {
-                    let characters = try response.map([CharacterEntity].self).toDomain()
+                    let characters = try response.map(ResponseEntity.self).data.results.toDomain()
                     completion(.success(characters))
+                } catch let MoyaError.objectMapping(_, response) {
+                    do {
+                        let errorEntity = try response.map(ErrorEntity.self)
+                        completion(.failure(.marvel(code: errorEntity.code, message: errorEntity.message)))
+                    } catch {
+                        completion(.failure(.underlying(error)))
+                    }
                 } catch {
                     completion(.failure(.underlying(error)))
                 }
@@ -30,13 +37,24 @@ public final class CharactersProvider: CharactersProviderContract {
         }
     }
 
-    public func character(id: Int, completion: @escaping CharacterCompletion) {
-        provider.request(.character(id: id)) { result in
+    public func character(_ id: Int, completion: @escaping CharacterCompletion) {
+        provider.request(.character(id)) { result in
             switch result {
             case let .success(response):
                 do {
-                    let character = try response.map(CharacterEntity.self).toDomain()
-                    completion(.success(character))
+                    let characters = try response.map(ResponseEntity.self).data.results.toDomain()
+                    if let character = characters.first {
+                        completion(.success(character))
+                    } else {
+                        completion(.failure(.notFound))
+                    }
+                } catch let MoyaError.objectMapping(_, response) {
+                    do {
+                        let errorEntity = try response.map(ErrorEntity.self)
+                        completion(.failure(.marvel(code: errorEntity.code, message: errorEntity.message)))
+                    } catch {
+                        completion(.failure(.underlying(error)))
+                    }
                 } catch {
                     completion(.failure(.underlying(error)))
                 }

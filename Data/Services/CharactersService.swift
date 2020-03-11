@@ -3,13 +3,13 @@ import Moya
 
 enum CharactersService: Service {
     case characters(nameStartsWith: String?, orderBy: Order)
-    case character(id: Int)
+    case character(_ id: Int)
 
     var baseURLString: String { "https://gateway.marvel.com:443/v1/public" }
 
     var mockName: String { "character" }
 
-    var parameters: [String : Any] { ["apikey": "acf7c2130d3523a49e85b76222973315"] }
+    var parameters: [String: Any] { (try? AuthenticationEntity().toDictionary()) ?? [:] }
 
     var path: String {
         switch self {
@@ -30,7 +30,8 @@ enum CharactersService: Service {
             return .requestParameters(parameters: parameters,
                                       encoding: encoding)
         case .character:
-            return .requestPlain
+            return .requestParameters(parameters: parameters,
+                                      encoding: encoding)
         }
     }
 }
