@@ -25,7 +25,6 @@ class OpenMarvelUITests: XCTestCase {
         let searchField = openmarvelNavigationBar.searchFields["Search characters"]
         searchField.tap()
         searchField.typeText("Iron Man")
-        app.buttons["Search"].tap()
         cellsQuery.containing(.staticText, identifier: "Iron Man").element.tap()
     }
 
