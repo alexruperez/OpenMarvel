@@ -4,7 +4,7 @@
 [![Twitter](https://img.shields.io/badge/contact-%40alexruperez-blue)](http://twitter.com/alexruperez)
 [![Swift](https://img.shields.io/badge/swift-5-orange)](https://swift.org)
 [![License](https://img.shields.io/github/license/alexruperez/OpenMarvel)](COPYING)
-[![Build](https://img.shields.io/travis/alexruperez/OpenMarvel)](https://travis-ci.org/alexruperez/OpenMarvel)
+[![Build Status](https://travis-ci.com/alexruperez/OpenMarvel.svg?branch=master)](https://travis-ci.com/alexruperez/OpenMarvel)
 [![Coverage](https://img.shields.io/codecov/c/github/alexruperez/OpenMarvel)](https://codecov.io/gh/alexruperez/OpenMarvel)
 
 ![Demo](demo.gif)
