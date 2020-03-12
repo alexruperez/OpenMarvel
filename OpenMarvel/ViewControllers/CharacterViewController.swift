@@ -91,9 +91,7 @@ class CharacterViewController: UIViewController, CharacterView {
     }
 
     @objc private func showLinks(_ sender: UIBarButtonItem) {
-        guard let character = character else {
-            return
-        }
+        guard let character = character else { return }
         let urls = Set(character.urls.map { $1 })
         if urls.count == 1, let url = urls.first {
             showSafariViewController(url)

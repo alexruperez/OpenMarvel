@@ -6,7 +6,21 @@ class OpenMarvelUITests: XCTestCase {
     }
 
     func testExample() {
-        XCUIApplication().launch()
+        let app = XCUIApplication()
+        app.launch()
+        let cellsQuery = app.collectionViews.cells
+        cellsQuery.otherElements.containing(.staticText, identifier:"3-D Man").element.tap()
+        let charactersNavigationBar = app.navigationBars["Characters"]
+        charactersNavigationBar.buttons["Bookmarks"].tap()
+        app.sheets["Links"].scrollViews.otherElements.buttons["Cancel"].tap()
+        charactersNavigationBar.buttons["Share"].tap()
+        app.navigationBars["UIActivityContentView"].buttons["Close"].tap()
+        let openmarvelButton = charactersNavigationBar.buttons["OpenMarvel"]
+        openmarvelButton.tap()
+        let searchField = app.navigationBars["OpenMarvel"].searchFields["Search characters"]
+        searchField.tap()
+        searchField.typeText("Iron Man")
+        app.buttons["Search"].tap()
     }
 
     func testLaunchPerformance() {

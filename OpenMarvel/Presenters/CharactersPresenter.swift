@@ -46,6 +46,7 @@ final class CharactersPresenter: Presenter {
         charactersUseCase.characters(nameStartsWith: nameStartsWith,
                                      offset: offset,
                                      orderBy: .ascending) { result in
+            guard self.searching == nameStartsWith, self.offset == offset else { return }
             switch result {
             case let .success(characters):
                 if offset == nil {
