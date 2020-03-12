@@ -5,7 +5,10 @@ import UIKit
 class CharactersViewController: UICollectionViewController, CharactersView {
     private var presenter: CharactersPresenter!
     private var characters = [Character]() {
-        didSet { collectionView.reloadData() }
+        didSet {
+            collectionView.refreshControl?.endRefreshing()
+            collectionView.reloadData()
+        }
     }
 
     required init?(coder: NSCoder) {
@@ -15,6 +18,15 @@ class CharactersViewController: UICollectionViewController, CharactersView {
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        let refreshControl = UIRefreshControl()
+        refreshControl.addTarget(self, action: #selector(refresh), for: .valueChanged)
+        collectionView.refreshControl = refreshControl
+        let searchController = UISearchController(searchResultsController: nil)
+        searchController.searchResultsUpdater = self
+        searchController.obscuresBackgroundDuringPresentation = false
+        searchController.searchBar.placeholder = "Search characters"
+        navigationItem.searchController = searchController
+        definesPresentationContext = true
         presenter.viewLoaded()
     }
 
@@ -25,13 +37,34 @@ class CharactersViewController: UICollectionViewController, CharactersView {
         super.viewWillAppear(animated)
     }
 
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y < collectionView.adjustedContentInset.top {
+            navigationItem.rightBarButtonItem = nil
+        } else if navigationItem.rightBarButtonItem == nil {
+            let barButtonItem = UIBarButtonItem(barButtonSystemItem: .search,
+                                                target: self,
+                                                action: #selector(switchSearch))
+            navigationItem.rightBarButtonItem = barButtonItem
+        }
+    }
+
     func set(state: CharactersViewState) {
         switch state {
-        case let .characters(characters):
+        case let .set(characters):
             self.characters = characters
+        case let .add(characters):
+            self.characters.append(contentsOf: characters)
         case let .error(error):
             errorAlert(error)
         }
+    }
+
+    @objc func refresh() {
+        presenter.refresh()
+    }
+
+    @objc func switchSearch() {
+        navigationItem.searchController?.isActive.toggle()
     }
 
     // MARK: - Segues
@@ -69,6 +102,9 @@ class CharactersViewController: UICollectionViewController, CharactersView {
                                  willDisplay cell: UICollectionViewCell,
                                  forItemAt indexPath: IndexPath) {
         (cell as? CharacterCell)?.configureLayer()
+        if indexPath.item + presenter.shouldLoadMoreInLast > characters.count {
+            presenter.loadMore(characters.count)
+        }
     }
 
     override func collectionView(_ collectionView: UICollectionView,
@@ -82,5 +118,11 @@ extension CharactersViewController: UICollectionViewDataSourcePrefetching {
     func collectionView(_ collectionView: UICollectionView,
                         prefetchItemsAt indexPaths: [IndexPath]) {
         ImagePrefetcher(urls: characters.compactMap { $0.thumbnailURL }).start()
+    }
+}
+
+extension CharactersViewController: UISearchResultsUpdating {
+    func updateSearchResults(for searchController: UISearchController) {
+        presenter.search(searchController.searchBar.text)
     }
 }

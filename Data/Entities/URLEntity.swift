@@ -7,7 +7,8 @@ struct URLEntity: Tuple {
     func tupleKey() -> AnyHashable { type.replacingOccurrences(of: "link", with: "") }
 
     func toDomain() throws -> URL {
-        guard let url = URL(string: url) else {
+        guard let urlString = url.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed),
+            let url = URL(string: urlString) else {
             throw DecodingError.dataCorrupted(
                 DecodingError.Context(codingPath: [CodingKeys.url],
                                       debugDescription: "Invalid URL format.")

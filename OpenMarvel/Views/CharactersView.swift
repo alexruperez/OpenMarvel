@@ -1,7 +1,8 @@
 import Domain
 
 enum CharactersViewState: ViewState {
-    case characters([Character])
+    case set([Character])
+    case add([Character])
     case error(String)
 }
 

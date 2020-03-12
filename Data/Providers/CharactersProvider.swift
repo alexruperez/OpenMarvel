@@ -13,9 +13,12 @@ public final class CharactersProvider: CharactersProviderContract {
     }
 
     public func characters(nameStartsWith: String?,
+                           offset: Int?,
                            orderBy: Order,
                            completion: @escaping CharactersCompletion) {
-        provider.request(.characters(nameStartsWith: nameStartsWith, orderBy: orderBy)) { result in
+        provider.request(.characters(nameStartsWith: nameStartsWith,
+                                     offset: offset,
+                                     orderBy: orderBy)) { result in
             switch result {
             case let .success(response):
                 do {

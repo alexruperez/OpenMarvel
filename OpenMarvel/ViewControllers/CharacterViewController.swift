@@ -101,7 +101,13 @@ class CharacterViewController: UIViewController, CharacterView {
             let alertController = UIAlertController(title: "Links",
                                                     message: nil,
                                                     preferredStyle: .actionSheet)
-            character.urls.forEach { link, url in
+            character.urls.filter { urls.contains($1) }.sorted {
+                guard let lhs = $0.key as? String,
+                    let rhs = $1.key as? String else {
+                        return false
+                }
+                return lhs < rhs
+            }.forEach { link, url in
                 guard let link = link as? String else { return }
                 alertController.addAction(UIAlertAction(title: link.localizedCapitalized,
                                                         style: .default,
