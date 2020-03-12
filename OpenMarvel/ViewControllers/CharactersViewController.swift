@@ -16,6 +16,8 @@ class CharactersViewController: UICollectionViewController, CharactersView {
         presenter = CharactersPresenter(self)
     }
 
+    // MARK: - Life Cycle
+
     override func viewDidLoad() {
         super.viewDidLoad()
         let refreshControl = UIRefreshControl()
@@ -37,16 +39,7 @@ class CharactersViewController: UICollectionViewController, CharactersView {
         super.viewWillAppear(animated)
     }
 
-    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        if scrollView.contentOffset.y < collectionView.adjustedContentInset.top {
-            navigationItem.rightBarButtonItem = nil
-        } else if navigationItem.rightBarButtonItem == nil {
-            let barButtonItem = UIBarButtonItem(barButtonSystemItem: .search,
-                                                target: self,
-                                                action: #selector(switchSearch))
-            navigationItem.rightBarButtonItem = barButtonItem
-        }
-    }
+    // MARK: - View Model
 
     func set(state: CharactersViewState) {
         switch state {
@@ -58,6 +51,8 @@ class CharactersViewController: UICollectionViewController, CharactersView {
             errorAlert(error)
         }
     }
+
+    // MARK: - Selectors
 
     @objc func refresh() {
         presenter.refresh()
@@ -77,6 +72,19 @@ class CharactersViewController: UICollectionViewController, CharactersView {
             controller.character = characters[indexPath.item]
             controller.navigationItem.leftBarButtonItem = splitViewController?.displayModeButtonItem
             controller.navigationItem.leftItemsSupplementBackButton = true
+        }
+    }
+
+    // MARK: - Scroll View
+
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        if scrollView.contentOffset.y < collectionView.adjustedContentInset.top {
+            navigationItem.rightBarButtonItem = nil
+        } else if navigationItem.rightBarButtonItem == nil {
+            let barButtonItem = UIBarButtonItem(barButtonSystemItem: .search,
+                                                target: self,
+                                                action: #selector(switchSearch))
+            navigationItem.rightBarButtonItem = barButtonItem
         }
     }
 
@@ -114,12 +122,21 @@ class CharactersViewController: UICollectionViewController, CharactersView {
     }
 }
 
+// MARK: - Prefetching
+
 extension CharactersViewController: UICollectionViewDataSourcePrefetching {
     func collectionView(_ collectionView: UICollectionView,
                         prefetchItemsAt indexPaths: [IndexPath]) {
         ImagePrefetcher(urls: characters.compactMap { $0.thumbnailURL }).start()
     }
+
+    func collectionView(_ collectionView: UICollectionView,
+                        cancelPrefetchingForItemsAt indexPaths: [IndexPath]) {
+        ImagePrefetcher(urls: characters.compactMap { $0.thumbnailURL }).stop()
+    }
 }
+
+// MARK: - Search
 
 extension CharactersViewController: UISearchResultsUpdating {
     func updateSearchResults(for searchController: UISearchController) {

@@ -1,0 +1,6 @@
+language: swift
+osx_image: xcode11.3
+script:
+  - xcodebuild clean test -project OpenMarvel.xcodeproj -scheme OpenMarvel -destination "platform=iOS Simulator,OS=13.3,name=iPhone 11" -configuration Debug -enableCodeCoverage YES
+after_success:
+  - bash <(curl -s https://codecov.io/bash)

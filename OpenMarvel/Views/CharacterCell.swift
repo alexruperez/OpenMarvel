@@ -24,8 +24,8 @@ class CharacterCell: UICollectionViewCell {
         layer.shadowRadius = 2
         layer.shadowOpacity = 1
         layer.masksToBounds = false
-        layer.shadowPath = UIBezierPath(roundedRect:bounds,
-                                        cornerRadius:contentView.layer.cornerRadius).cgPath
+        layer.shadowPath = UIBezierPath(roundedRect: bounds,
+                                        cornerRadius: contentView.layer.cornerRadius).cgPath
     }
 
     func cancelThumbnailDownload() {

@@ -6,7 +6,7 @@ struct CharacterEntity: Entity {
     let description: String
     let thumbnail: ThumbnailEntity
     let urls: [URLEntity]
-    
+
     func toDomain() throws -> Character {
         Character(id: id,
                   name: name,

@@ -12,14 +12,12 @@ protocol Service: TargetType {
 }
 
 extension Service {
-    static var mockBundle: String { "com.alexruperez.Mock" }
+    static var mockBundle: String { "com.alexruperez.DataTests" }
     var baseURL: URL { URL(string: baseURLString)! }
     var method: Moya.Method { .get }
     var contentType: String { "application/json; charset=utf-8" }
     var mockExtension: String { "json" }
-    var parameters: [String: Any] { [:] }
     var encoding: ParameterEncoding { URLEncoding.queryString }
-    var task: Task { .requestParameters(parameters: parameters, encoding: encoding) }
     var sampleData: Data {
         guard let mockBundle = Bundle(identifier: Self.mockBundle),
             let url = mockBundle.url(forResource: mockName, withExtension: mockExtension),

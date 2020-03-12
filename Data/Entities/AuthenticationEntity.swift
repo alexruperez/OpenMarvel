@@ -19,7 +19,11 @@ struct AuthenticationEntity: Encodable {
         let data = try JSONEncoder().encode(self)
         let jsonObject = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
         guard let dictionary = jsonObject as? [String: Any] else {
-            throw NSError()
+            throw EncodingError.invalidValue(
+                jsonObject, EncodingError.Context(codingPath: [CodingKeys.apikey,
+                                                               CodingKeys.ts,
+                                                               CodingKeys.hash],
+                                                  debugDescription: "Invalid authentication format."))
         }
         return dictionary
     }

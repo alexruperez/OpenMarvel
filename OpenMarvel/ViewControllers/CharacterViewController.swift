@@ -8,18 +8,19 @@ class CharacterViewController: UIViewController, CharacterView {
     @IBOutlet private weak var descriptionLabel: UILabel?
     @IBOutlet private weak var imageView: UIImageView?
 
+    private var presenter: CharacterPresenter!
+    var characterLoaded = false
     var character: Character? {
         get { presenter.character }
         set { presenter.character = newValue }
     }
-    var characterLoaded = false
-
-    private var presenter: CharacterPresenter!
 
     required init?(coder: NSCoder) {
         super.init(coder: coder)
         presenter = CharacterPresenter(self)
     }
+
+    // MARK: - Life Cycle
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,8 @@ class CharacterViewController: UIViewController, CharacterView {
         super.viewWillDisappear(animated)
         cancelThumbnailDownload()
     }
+
+    // MARK: - View Model
 
     func set(state: CharacterViewState) {
         characterLoaded = false
@@ -64,6 +67,12 @@ class CharacterViewController: UIViewController, CharacterView {
         }
         navigationItem.rightBarButtonItems = barButtonItems
     }
+
+    private func cancelThumbnailDownload() {
+        imageView?.kf.cancelDownloadTask()
+    }
+
+    // MARK: - Selectors
 
     @objc private func share(_ sender: UIBarButtonItem) {
         guard let character = character else { return }
@@ -109,7 +118,7 @@ class CharacterViewController: UIViewController, CharacterView {
                 guard let link = link as? String else { return }
                 alertController.addAction(UIAlertAction(title: link.localizedCapitalized,
                                                         style: .default,
-                                                        handler: { action in
+                                                        handler: { _ in
                     self.showSafariViewController(url)
                 }))
             }
@@ -126,9 +135,5 @@ class CharacterViewController: UIViewController, CharacterView {
         safariViewController.preferredBarTintColor = navigationBar?.barTintColor
         safariViewController.preferredControlTintColor = navigationBar?.tintColor
         present(safariViewController, animated: true)
-    }
-
-    private func cancelThumbnailDownload() {
-        imageView?.kf.cancelDownloadTask()
     }
 }

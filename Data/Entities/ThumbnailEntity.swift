@@ -8,7 +8,8 @@ struct ThumbnailEntity: Entity {
         guard !path.hasSuffix("image_not_available"),
             let url = URL(string: path + "." + self.extension) else {
             throw DecodingError.dataCorrupted(
-                DecodingError.Context(codingPath: [CodingKeys.path, CodingKeys.extension],
+                DecodingError.Context(codingPath: [CodingKeys.path,
+                                                   CodingKeys.extension],
                                       debugDescription: "Invalid URL format.")
             )
         }

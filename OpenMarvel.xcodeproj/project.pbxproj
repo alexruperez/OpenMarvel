@@ -12,7 +12,6 @@
 		D516F8662418005D00992463 /* libDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D516F85D2417FFEF00992463 /* libDomain.a */; };
 		D516F86A241800A700992463 /* libDomain.a in Frameworks */ = {isa = PBXBuildFile; fileRef = D516F85D2417FFEF00992463 /* libDomain.a */; };
 		D516F873241805D800992463 /* Moya in Frameworks */ = {isa = PBXBuildFile; productRef = D516F872241805D800992463 /* Moya */; };
-		D516F884241811F100992463 /* character.json in Resources */ = {isa = PBXBuildFile; fileRef = D516F882241811F000992463 /* character.json */; };
 		D516F8A32418249400992463 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516F89C2418249400992463 /* AppDelegate.swift */; };
 		D516F8A52418249400992463 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516F89E2418249400992463 /* SceneDelegate.swift */; };
 		D516F8A62418249400992463 /* CharacterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D516F8A12418249400992463 /* CharacterViewController.swift */; };
@@ -53,6 +52,7 @@
 		D52869622418F0D9009DEAA5 /* AuthenticationEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52869612418F0D9009DEAA5 /* AuthenticationEntity.swift */; };
 		D52869642418FA5E009DEAA5 /* ThumbnailEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52869632418FA5E009DEAA5 /* ThumbnailEntity.swift */; };
 		D52869662418FB37009DEAA5 /* URLEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = D52869652418FB37009DEAA5 /* URLEntity.swift */; };
+		D52B02A0241A5974008ACD8E /* character.json in Resources */ = {isa = PBXBuildFile; fileRef = D516F882241811F000992463 /* character.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,13 +83,6 @@
 			proxyType = 1;
 			remoteGlobalIDString = D516F85C2417FFEF00992463;
 			remoteInfo = Domain;
-		};
-		D516F8862418121200992463 /* PBXContainerItemProxy */ = {
-			isa = PBXContainerItemProxy;
-			containerPortal = D516F80E2417FF3500992463 /* Project object */;
-			proxyType = 1;
-			remoteGlobalIDString = D516F87B241811D200992463;
-			remoteInfo = Mock;
 		};
 		D516F8CC24182CBE00992463 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -168,8 +161,6 @@
 		D516F8422417FF3800992463 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D516F8522417FFDC00992463 /* libData.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libData.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		D516F85D2417FFEF00992463 /* libDomain.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libDomain.a; sourceTree = BUILT_PRODUCTS_DIR; };
-		D516F87C241811D200992463 /* Mock.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mock.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
-		D516F87E241811D200992463 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D516F882241811F000992463 /* character.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = character.json; sourceTree = "<group>"; };
 		D516F89C2418249400992463 /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D516F89D2418249400992463 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -254,13 +245,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D516F879241811D200992463 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D516F8C324182CBE00992463 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -295,11 +279,10 @@
 				D516F8182417FF3500992463 /* OpenMarvel */,
 				D516F8342417FF3800992463 /* OpenMarvelTests */,
 				D516F83F2417FF3800992463 /* OpenMarvelUITests */,
-				D516F8532417FFDC00992463 /* Data */,
 				D516F85E2417FFEF00992463 /* Domain */,
-				D516F87D241811D200992463 /* Mock */,
-				D516F8C724182CBE00992463 /* DataTests */,
 				D516F8D624182CD400992463 /* DomainTests */,
+				D516F8532417FFDC00992463 /* Data */,
+				D516F8C724182CBE00992463 /* DataTests */,
 				D516F8E52418CBCB00992463 /* Injector */,
 				D516F8172417FF3500992463 /* Products */,
 				D516F8642418003F00992463 /* Frameworks */,
@@ -314,7 +297,6 @@
 				D516F83C2417FF3800992463 /* OpenMarvelUITests.xctest */,
 				D516F8522417FFDC00992463 /* libData.a */,
 				D516F85D2417FFEF00992463 /* libDomain.a */,
-				D516F87C241811D200992463 /* Mock.bundle */,
 				D516F8C624182CBE00992463 /* DataTests.xctest */,
 				D516F8D524182CD400992463 /* DomainTests.xctest */,
 				D516F8E42418CBCB00992463 /* libInjector.a */,
@@ -355,8 +337,8 @@
 		D516F8532417FFDC00992463 /* Data */ = {
 			isa = PBXGroup;
 			children = (
-				D516F8AD241824A300992463 /* Entities */,
 				D516F8AB241824A300992463 /* Providers */,
+				D516F8AD241824A300992463 /* Entities */,
 				D516F8A8241824A300992463 /* Services */,
 			);
 			path = Data;
@@ -377,15 +359,6 @@
 			children = (
 			);
 			name = Frameworks;
-			sourceTree = "<group>";
-		};
-		D516F87D241811D200992463 /* Mock */ = {
-			isa = PBXGroup;
-			children = (
-				D516F882241811F000992463 /* character.json */,
-				D516F87E241811D200992463 /* Info.plist */,
-			);
-			path = Mock;
 			sourceTree = "<group>";
 		};
 		D516F89A2418249400992463 /* Presenters */ = {
@@ -490,6 +463,7 @@
 		D516F8C724182CBE00992463 /* DataTests */ = {
 			isa = PBXGroup;
 			children = (
+				D516F882241811F000992463 /* character.json */,
 				D516F8C824182CBE00992463 /* DataTests.swift */,
 				D516F8CA24182CBE00992463 /* Info.plist */,
 			);
@@ -595,7 +569,6 @@
 			buildRules = (
 			);
 			dependencies = (
-				D516F8872418121200992463 /* PBXTargetDependency */,
 				D516F8682418006200992463 /* PBXTargetDependency */,
 			);
 			name = Data;
@@ -622,23 +595,6 @@
 			productName = Domain;
 			productReference = D516F85D2417FFEF00992463 /* libDomain.a */;
 			productType = "com.apple.product-type.library.static";
-		};
-		D516F87B241811D200992463 /* Mock */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = D516F87F241811D200992463 /* Build configuration list for PBXNativeTarget "Mock" */;
-			buildPhases = (
-				D516F878241811D200992463 /* Sources */,
-				D516F879241811D200992463 /* Frameworks */,
-				D516F87A241811D200992463 /* Resources */,
-			);
-			buildRules = (
-			);
-			dependencies = (
-			);
-			name = Mock;
-			productName = Mock;
-			productReference = D516F87C241811D200992463 /* Mock.bundle */;
-			productType = "com.apple.product-type.bundle";
 		};
 		D516F8C524182CBE00992463 /* DataTests */ = {
 			isa = PBXNativeTarget;
@@ -722,9 +678,6 @@
 					D516F85C2417FFEF00992463 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
-					D516F87B241811D200992463 = {
-						CreatedOnToolsVersion = 11.3.1;
-					};
 					D516F8C524182CBE00992463 = {
 						CreatedOnToolsVersion = 11.3.1;
 					};
@@ -758,7 +711,6 @@
 				D516F83B2417FF3800992463 /* OpenMarvelUITests */,
 				D516F8512417FFDC00992463 /* Data */,
 				D516F8C524182CBE00992463 /* DataTests */,
-				D516F87B241811D200992463 /* Mock */,
 				D516F85C2417FFEF00992463 /* Domain */,
 				D516F8D424182CD400992463 /* DomainTests */,
 				D516F8E32418CBCB00992463 /* Injector */,
@@ -791,18 +743,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D516F87A241811D200992463 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				D516F884241811F100992463 /* character.json in Resources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D516F8C424182CBE00992463 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D52B02A0241A5974008ACD8E /* character.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -881,13 +826,6 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D516F878241811D200992463 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		D516F8C224182CBE00992463 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -934,11 +872,6 @@
 			isa = PBXTargetDependency;
 			target = D516F85C2417FFEF00992463 /* Domain */;
 			targetProxy = D516F86B241800A700992463 /* PBXContainerItemProxy */;
-		};
-		D516F8872418121200992463 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = D516F87B241811D200992463 /* Mock */;
-			targetProxy = D516F8862418121200992463 /* PBXContainerItemProxy */;
 		};
 		D516F8CD24182CBE00992463 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
@@ -1243,32 +1176,6 @@
 			};
 			name = Release;
 		};
-		D516F880241811D200992463 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Mock/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexruperez.Mock;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Debug;
-		};
-		D516F881241811D200992463 /* Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				COMBINE_HIDPI_IMAGES = YES;
-				INFOPLIST_FILE = Mock/Info.plist;
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Bundles";
-				PRODUCT_BUNDLE_IDENTIFIER = com.alexruperez.Mock;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				SKIP_INSTALL = YES;
-				WRAPPER_EXTENSION = bundle;
-			};
-			name = Release;
-		};
 		D516F8CF24182CBE00992463 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -1394,15 +1301,6 @@
 			buildConfigurations = (
 				D516F8622417FFEF00992463 /* Debug */,
 				D516F8632417FFEF00992463 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
-		D516F87F241811D200992463 /* Build configuration list for PBXNativeTarget "Mock" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				D516F880241811D200992463 /* Debug */,
-				D516F881241811D200992463 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

@@ -24,12 +24,13 @@ public final class CharactersProvider: CharactersProviderContract {
                 do {
                     let characters = try response.map(ResponseEntity.self).data.results.toDomain()
                     completion(.success(characters))
-                } catch let MoyaError.objectMapping(_, response) {
+                } catch let MoyaError.objectMapping(mappingError, response) {
                     do {
                         let errorEntity = try response.map(ErrorEntity.self)
-                        completion(.failure(.marvel(code: errorEntity.code, message: errorEntity.message)))
+                        completion(.failure(.marvel(code: errorEntity.code,
+                                                    message: errorEntity.message)))
                     } catch {
-                        completion(.failure(.underlying(error)))
+                        completion(.failure(.underlying(mappingError)))
                     }
                 } catch {
                     completion(.failure(.underlying(error)))
@@ -54,7 +55,8 @@ public final class CharactersProvider: CharactersProviderContract {
                 } catch let MoyaError.objectMapping(_, response) {
                     do {
                         let errorEntity = try response.map(ErrorEntity.self)
-                        completion(.failure(.marvel(code: errorEntity.code, message: errorEntity.message)))
+                        completion(.failure(.marvel(code: errorEntity.code,
+                                                    message: errorEntity.message)))
                     } catch {
                         completion(.failure(.underlying(error)))
                     }

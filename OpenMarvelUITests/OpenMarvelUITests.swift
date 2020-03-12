@@ -5,22 +5,28 @@ class OpenMarvelUITests: XCTestCase {
         continueAfterFailure = false
     }
 
-    func testExample() {
+    func testHappyPath() {
         let app = XCUIApplication()
         app.launch()
-        let cellsQuery = app.collectionViews.cells
-        cellsQuery.otherElements.containing(.staticText, identifier:"3-D Man").element.tap()
+        let cellsQuery = app.collectionViews.cells.otherElements
+        cellsQuery.containing(.staticText, identifier: "3-D Man").element.tap()
         let charactersNavigationBar = app.navigationBars["Characters"]
         charactersNavigationBar.buttons["Bookmarks"].tap()
         app.sheets["Links"].scrollViews.otherElements.buttons["Cancel"].tap()
         charactersNavigationBar.buttons["Share"].tap()
         app.navigationBars["UIActivityContentView"].buttons["Close"].tap()
-        let openmarvelButton = charactersNavigationBar.buttons["OpenMarvel"]
-        openmarvelButton.tap()
-        let searchField = app.navigationBars["OpenMarvel"].searchFields["Search characters"]
+        charactersNavigationBar.buttons["OpenMarvel"].tap()
+        #if !targetEnvironment(macCatalyst)
+        app.collectionViews.element.swipeUp()
+        app.collectionViews.element.swipeUp()
+        #endif
+        let openmarvelNavigationBar = app.navigationBars["OpenMarvel"]
+        openmarvelNavigationBar.buttons["Search"].tap()
+        let searchField = openmarvelNavigationBar.searchFields["Search characters"]
         searchField.tap()
         searchField.typeText("Iron Man")
         app.buttons["Search"].tap()
+        cellsQuery.containing(.staticText, identifier: "Iron Man").element.tap()
     }
 
     func testLaunchPerformance() {
