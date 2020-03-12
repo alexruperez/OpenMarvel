@@ -6,6 +6,7 @@
 [![License](https://img.shields.io/github/license/alexruperez/OpenMarvel)](COPYING)
 [![Build Status](https://travis-ci.com/alexruperez/OpenMarvel.svg?branch=master)](https://travis-ci.com/alexruperez/OpenMarvel)
 [![Coverage](https://img.shields.io/codecov/c/github/alexruperez/OpenMarvel)](https://codecov.io/gh/alexruperez/OpenMarvel)
+[![codebeat](https://codebeat.co/badges/81de94a0-0ae4-430f-bafd-e63bf19d9c6e)](https://codebeat.co/projects/github-com-alexruperez-openmarvel-master)
 
 ![Demo](demo.gif)
 
